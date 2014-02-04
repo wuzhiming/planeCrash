@@ -40,7 +40,7 @@ var cocos2dApp = cc.Application.extend({
 
         cc.EGLView.getInstance()._adjustSizeToBrowser();
         var screenSize = cc.EGLView.getInstance().getFrameSize();
-        var resourceSize = cc.size(480, 800);
+        var resourceSize = cc.size(512, 768);
         var designSize = cc.size(480, 800);
 
         var searchPaths = [];
@@ -58,7 +58,7 @@ var cocos2dApp = cc.Application.extend({
                 resDirOrders.push("HD");
             }
             else {
-                resourceSize = cc.size(320, 480);
+                resourceSize = cc.size(512, 768);
                 designSize = cc.size(320, 480);
                 resDirOrders.push("Normal");
             }
@@ -66,7 +66,7 @@ var cocos2dApp = cc.Application.extend({
 
         cc.FileUtils.getInstance().setSearchResolutionsOrder(resDirOrders);
         director.setContentScaleFactor(resourceSize.width / designSize.width);
-        cc.EGLView.getInstance().setDesignResolutionSize(designSize.width, designSize.height, cc.RESOLUTION_POLICY.SHOW_ALL);
+        cc.EGLView.getInstance().setDesignResolutionSize(designSize.width, designSize.height, cc.RESOLUTION_POLICY.FIXED_WIDTH);
         cc.EGLView.getInstance()._resizeWithBrowserSize(true);
 
         // turn on display FPS
