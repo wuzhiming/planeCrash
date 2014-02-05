@@ -15,7 +15,7 @@ PC.gameStatusLost = -1;
 /*背景最大的index*/
 PC.bgMaxIndex = 5;
 
-
+PC.bgZorder = 0;//背景的zorder
 
 /*用于随机的函数*/
 PC.random = function(x,y){

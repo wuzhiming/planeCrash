@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 14-2-4.
  */
-var bgController = cc.Class.extend({
+var BgController = cc.Class.extend({
     ctor:function(){
       this.init();
     },
@@ -13,11 +13,11 @@ var bgController = cc.Class.extend({
 
     }
 });
-bgController._instance = null;
-bgController.getInstance = function(){
-    if(!bgController._instance){
-        bgController._instance = new bgController();
+BgController._instance = null;
+BgController.getInstance = function(){
+    if(!BgController._instance){
+        BgController._instance = new BgController();
 
     }
-    return bgController._instance;
+    return BgController._instance;
 }

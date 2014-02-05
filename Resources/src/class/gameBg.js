@@ -3,7 +3,8 @@
  */
 var GameBg = cc.Sprite.extend({
     ctor:function(bgid){
-        this.initWithSpriteFrameName("img_bg_level_"+bgid+".jpg");
+        this._super();
+        this.initWithFile("img_bg_level_1.jpg");
         this.setAnchorPoint(0, 0);
     }
 });
